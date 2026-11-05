@@ -27,3 +27,17 @@ fun TampilSiswa(
         Pair(stringResource(id = R.string.gender), statusUiSiswa.gender),
         Pair(stringResource(R.string.alamat), statusUiSiswa.alamat)
     )
+
+    Scaffold(
+        modifier = Modifier,
+        // Gunakan parameter topBar secara eksplisit
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.detail), color = Color.White) },
+                // Gunakan topAppBarColors dan containerColor yang terbaru dari Material 3
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = colorResource(id = R.color.purple_500)
+                ),
+            )
+        }
+    )
